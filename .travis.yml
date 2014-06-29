@@ -3,7 +3,7 @@ rvm:
 - 2.0.0
 before_script:
   - mysql -e "CREATE DATABASE blog"
-  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && mysql -e "CREATE DATABASE blog" || false'
+  - '[ "${TRAVIS_PULL_REQUEST}" != "false" ] && ./apply-master.sh || false'
 script:
   - bundle install
   - bundle exec rake development:apply[blog]
