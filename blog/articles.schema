@@ -4,3 +4,5 @@ create_table "articles", force: true do |t|
   t.datetime "created_at"
   t.datetime "updated_at"
 end
+
+add_index "articles", ["title"], name: "index_articles_on_title", using: :btree
