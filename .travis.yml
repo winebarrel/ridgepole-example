@@ -1,6 +1,8 @@
 language: ruby
 rvm:
 - 2.0.0
+before_script:
+  - mysql -e "CREATE DATABASE blog"
 script:
   - bundle install
   - bundle exec rake development:apply[blog]
