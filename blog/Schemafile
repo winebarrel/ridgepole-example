@@ -1,0 +1,2 @@
+require 'articles.schema'
+require 'comments.schema'

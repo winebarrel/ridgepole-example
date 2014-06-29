@@ -1,0 +1,5 @@
+development_blog:
+  adapter: mysql2
+  encoding: utf8
+  database: blog
+  username: root
